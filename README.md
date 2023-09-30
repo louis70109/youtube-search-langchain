@@ -52,4 +52,4 @@ gcloud run deploy calendar-linebot-1 --source .
 
 ## LICENSE
 
-請見 LICENSE 文件。
+[MIT](https://github.com/louis70109/youtube-search-langchain/blob/main/LICENSE)

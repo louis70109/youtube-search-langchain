@@ -1,6 +1,7 @@
 ## LangChain Example for Youtube search
 
 使用 LangChain 搭配 OpenAI，當呼叫 API 時提供問題，則會回傳一個影片以及敘述給用戶
+
 ## 環境變數
 
 你需要設置以下環境變數：
@@ -50,6 +51,6 @@ gcloud run deploy calendar-linebot-1 --source .
 
 如果你有任何問題或建議，歡迎開 issue 或 pull request。
 
-## LICENSE
+## LISENSE
 
 [MIT](https://github.com/louis70109/youtube-search-langchain/blob/main/LICENSE)

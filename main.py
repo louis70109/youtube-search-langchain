@@ -29,13 +29,15 @@ open_ai_agent = initialize_agent(
 
 @app.get("/api")
 def handle_callback(q: str):
-    print(f"testing...data is {q}")
+    log(f"testing...data is {q}")
     tool_result = open_ai_agent.run(q)
     return tool_result
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', default=8080))
-    debug = True if os.environ.get(
-        'API_ENV', default='develop') == 'develop' else False
+    debug = True 
+    if os.environ.get(
+        'API_ENV', default='develop') == 'develop' 
+    else False
     logging.info('Application will start...')
     uvicorn.run("main:app", host="0.0.0.0", port=port, reload=debug)

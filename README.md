@@ -29,8 +29,8 @@ python main.py
 Clone 此專案
 
 ```
-git clone https://github.com/louis70109/calendar-linebot
-cd calendar-linebot/
+git clone https://github.com/louis70109/youtube-search-langchain
+cd youtube-search-langchain/
 ```
 
 ### gcloud 基礎設定

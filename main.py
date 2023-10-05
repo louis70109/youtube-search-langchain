@@ -8,11 +8,10 @@ if os.getenv('API_ENV') != 'production':
 
 import uvicorn
 import logging
-from fastapi import Request, FastAPI, HTTPException
+from fastapi import FastAPI
 from langchain.chat_models import ChatOpenAI
 from langchain.agents import AgentType
-from langchain.agents import initialize_agent, Tool
-from langchain.schema import HumanMessage
+from langchain.agents import initialize_agent
 
 
 logging.basicConfig(level=os.getenv('LOG', 'WARNING'))

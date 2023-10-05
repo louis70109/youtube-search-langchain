@@ -5,6 +5,7 @@ from pydantic import BaseModel, Field
 from langchain.tools import YouTubeSearchTool
 import logging
 
+
 class YoutubeDefineInput(BaseModel):
     """Youtube video recommendation."""
 

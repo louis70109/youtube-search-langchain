@@ -29,7 +29,7 @@ open_ai_agent = initialize_agent(
 
 @app.get("/api")
 def handle_callback(q: str):
-    print(f"testing...data is {q}")
+    logging.info(f"testing...data is {q}")
     tool_result = open_ai_agent.run(q)
     return tool_result
 

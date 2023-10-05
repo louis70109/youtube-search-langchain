@@ -3,7 +3,7 @@ from langchain.tools import BaseTool
 from typing import Optional, Type
 from pydantic import BaseModel, Field
 from langchain.tools import YouTubeSearchTool
-
+import logging
 
 class YoutubeDefineInput(BaseModel):
     """Youtube video recommendation."""
@@ -18,8 +18,8 @@ class FindYoutubeVideoTool(BaseTool):
     description = "Find recommendation video from Youtube"
 
     def _run(self, title: str):
-        print("Youtube")
-        print('標題：'+title)
+        logging.info("Youtube")
+        logging.info('標題：'+title)
         tool = YouTubeSearchTool()
         youtube_str = tool.run(title)  # force change str to list
         youtube_list = literal_eval(youtube_str)

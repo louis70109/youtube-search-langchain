@@ -8,11 +8,10 @@ if os.getenv('API_ENV') != 'production':
 
 import uvicorn
 import logging
-from fastapi import Request, FastAPI, HTTPException
+from fastapi import FastAPI
 from langchain.chat_models import ChatOpenAI
 from langchain.agents import AgentType
-from langchain.agents import initialize_agent, Tool
-from langchain.schema import HumanMessage
+from langchain.agents import initialize_agent
 
 
 logging.basicConfig(level=os.getenv('LOG', 'WARNING'))
@@ -29,7 +28,7 @@ open_ai_agent = initialize_agent(
 
 @app.get("/api")
 def handle_callback(q: str):
-    print(f"testing...data is {q}")
+    logging.info(f"testing...data is {q}")
     tool_result = open_ai_agent.run(q)
     return tool_result
 

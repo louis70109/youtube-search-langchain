@@ -1,4 +1,4 @@
-## LangChain Example for Youtube search
+## LangChain Example for Youtube Search
 
 使用 LangChain 搭配 OpenAI，當呼叫 API 時提供問題，則會回傳一個影片以及敘述給用戶
 
